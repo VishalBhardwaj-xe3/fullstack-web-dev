@@ -1,0 +1,148 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  background: #3b3939;
+  width: 100%;
+  max-width: 500px;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* Heading */
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Quiz container */
+#quiz-container {
+  margin-top: 20px;
+}
+
+#question-container h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Choices list */
+#choices-list {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#choices-list li {
+  background: #0080ff;
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+#choices-list li:hover {
+  background: #003cff;
+  border-color: #4f46e5;
+}
+
+/* Buttons general */
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.08s ease;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Specific buttons */
+#next-btn {
+  margin-top: 10px;
+}
+
+#start-btn {
+  margin-top: 20px;
+}
+
+#restart-btn {
+  margin-top: 20px;
+}
+
+/* Result container */
+#result-container {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+#result-container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+#result-container p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #choices-list li {
+    font-size: 0.95rem;
+  }
+  button {
+    width: 100%;
+  }
+}
